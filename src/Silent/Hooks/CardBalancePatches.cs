@@ -92,7 +92,9 @@ public static class MasterPlannerPowerPatch
     {
         __result = Task.CompletedTask;
 
-        if (cardPlay.Card.Owner != __instance.Owner.Player)
+        if (cardPlay.Card.Owner != __instance.Owner.Player
+            || cardPlay.Card.Type != CardType.Skill
+            || cardPlay.Card.IsSlyThisTurn)
         {
             return false;
         }
