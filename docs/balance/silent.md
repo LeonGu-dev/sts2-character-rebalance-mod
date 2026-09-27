@@ -17,12 +17,12 @@
 
 ## 相关文件
 
-- `SilentRebalance/SilentRebalanceCode/Cards/Concentrate.cs`
-- `SilentRebalance/SilentRebalanceCode/Hooks/CardBalancePatches.cs`
-- `SilentRebalance/SilentRebalance/localization/zhs/cards.json`
-- `SilentRebalance/SilentRebalance/localization/eng/cards.json`
-- `SilentRebalance/SilentRebalance/images/card_portraits/concentrate.png`
-- `SilentRebalance/SilentRebalance/images/card_portraits/big/concentrate.png`
+- `src/Silent/Cards/Concentrate.cs`
+- `src/Silent/Hooks/CardBalancePatches.cs`
+- `RebalanceMod/localization/zhs/cards.json`
+- `RebalanceMod/localization/eng/cards.json`
+- `RebalanceMod/SilentRebalance/images/card_portraits/concentrate.png`
+- `RebalanceMod/SilentRebalance/images/card_portraits/big/concentrate.png`
 
 ## 卡图来源
 
@@ -33,4 +33,4 @@
 
 ## 发布状态
 
-以下为迁移前的历史记录，并非最新游戏安装状态：曾执行 `SilentRebalance\\publish.bat`，生成 `SilentRebalance.pck`；当时 DLL 编译无错误、无警告，仅包含静默模组自己的初始化器。迁移后独立工程已再次编译成功，游戏内功能仍待按测试清单复核。
+以下为迁移前的历史记录，并非最新游戏安装状态：曾生成独立的 `SilentRebalance.pck`。当前静默猎手代码已并入唯一的 `RebalanceMod`，不再发布独立 DLL 或 PCK；游戏内功能仍待按测试清单复核。

@@ -5,7 +5,7 @@
       "label": "Build (dll only)",
       "type": "process",
       "command": "dotnet",
-      "args": ["build", "IroncladRebalance.csproj", "-c", "Release"],
+      "args": ["build", "RebalanceMod.csproj", "-c", "Release"],
       "group": { "kind": "build", "isDefault": true },
       "problemMatcher": "$msCompile",
       "presentation": { "reveal": "always", "panel": "shared" }
@@ -14,7 +14,7 @@
       "label": "Publish (dll + pck)",
       "type": "process",
       "command": "dotnet",
-      "args": ["publish", "IroncladRebalance.csproj", "-c", "Release"],
+      "args": ["publish", "RebalanceMod.csproj", "-c", "Release"],
       "problemMatcher": "$msCompile",
       "presentation": { "reveal": "always", "panel": "shared" }
     },

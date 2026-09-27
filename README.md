@@ -1,31 +1,29 @@
-# Slay the Spire 2 character rebalance mod
+# Slay the Spire 2 character rebalance
 
-铁甲战士、静默猎手和故障机器人平衡性调整工程。根目录的 `IroncladRebalance.csproj` 当前构建合并包 `RebalanceMod`；静默猎手和故障机器人也各有独立工程。游戏版本和 BaseLib 变化可能要求重新验证补丁。
+一个 `RebalanceMod` 同时调整铁甲战士、静默猎手和故障机器人。仓库只有一个 C# 工程、一个 Mod 清单、一个初始化入口和一个 PCK。后续角色也加入同一个 Mod，不再创建职业专属 DLL。
 
-## 工程位置
+## 目录
 
-| 用途 | 工程 / 代码 | 游戏中的安装目录 |
-| --- | --- | --- |
-| 三角色合并包（主要工程） | `IroncladRebalance.csproj`、`MySts2ContentModCode/`、`SilentRebalance/SilentRebalanceCode/`、`DefectRebalance/DefectRebalanceCode/` | `<游戏目录>/mods/RebalanceMod/` |
-| 静默猎手独立包 | `SilentRebalance/SilentRebalance.csproj` | `<游戏目录>/mods/SilentRebalance/` |
-| 故障机器人独立包 | `DefectRebalance/DefectRebalance.csproj` | `<游戏目录>/mods/DefectRebalance/` |
+| 路径 | 用途 |
+| --- | --- |
+| `RebalanceMod.csproj`、`RebalanceMod.json` | 唯一工程与 Mod 清单 |
+| `src/ModEntry.cs` | 唯一 `ModInitializer`，一次性注册 Harmony 补丁 |
+| `src/Ironclad/`、`src/Silent/`、`src/Defect/` | 按角色组织的卡牌和补丁代码 |
+| `RebalanceMod/<角色>/images/` | 随 PCK 发布的卡图、图标及 Godot 导入配置 |
+| `RebalanceMod/localization/` | 所有角色共用的英中卡牌文本 |
+| `docs/` | 交接、设计、测试与发布记录 |
 
-根目录的 `IroncladRebalance/` 与两个角色工程内的同名资源目录保存卡图、图标和本地化。`RebalanceModLocalization/` 保存合并包使用的本地化。构建时生成的根目录 `RebalanceMod/` 是暂存资源，不属于源码。
+旧卡牌类的命名空间暂时保留，避免改变 BaseLib 根据命名空间生成的卡牌 ID 及已有本地化键。新增角色时先在 `src/` 与 `RebalanceMod/` 下增加对应目录，并继续使用唯一的工程和清单。
 
-## 本地准备与构建
+## 本地构建
 
-1. 安装 .NET 9 SDK、Slay the Spire 2、项目所需 NuGet 包和 MegaDot / Godot **4.5.1 mono**。
-2. 复制 `Directory.Build.props.example` 为 `Directory.Build.props`，填写本机 `Sts2Path` 和 `GodotPath`。此文件仅用于本机，已被 Git 忽略。`Sts2PathDiscovery.props` 可在没有显式路径时尝试发现游戏目录。
-3. 完全退出游戏，再从仓库根目录执行 `build.bat`（只改 C# 时）或 `publish.bat`（改了本地化、图片或其他资源时）。脚本调用 `dotnet build/publish IroncladRebalance.csproj -c Release`；工程会将 DLL、清单和 PDB 复制到游戏的 `mods/RebalanceMod/`，完整发布还会通过 MegaDot 导出 `RebalanceMod.pck`。
-4. 独立包使用 `SilentRebalance/build.bat`、`SilentRebalance/publish.bat` 或 `DefectRebalance/build.bat`、`DefectRebalance/publish.bat`，分别安装到其同名 mod 目录。
-5. `launch.bat` 通过 Steam 启动游戏。进入游戏前确认所测试的安装目录中有对应 DLL、JSON 和 PCK；仅执行 build 时不会重建 PCK。
+1. 安装 .NET 9 SDK、Slay the Spire 2、所需 NuGet 包及 MegaDot / Godot **4.5.1 mono**。
+2. 将 `Directory.Build.props.example` 复制成 `Directory.Build.props`，填写本机的 `Sts2Path` 和 `GodotPath`。此文件被 Git 忽略；`Sts2PathDiscovery.props` 也会尝试自动定位游戏。
+3. 完全退出游戏。在仓库根目录运行 `build.bat`，构建 DLL、JSON、PDB 并安装到 `<游戏目录>/mods/RebalanceMod/`。本地化、图片或其他资源变更后运行 `publish.bat`，它还会重新导出并安装 `RebalanceMod.pck`。
+4. `launch.bat` 通过 Steam 启动游戏。发布后核对安装目录中的 DLL、JSON、PCK，并在游戏内测试。单纯 `build` 不会更新 PCK。
 
-当前脚本的成功提示包含原作者机器的 `D:\Steam` 路径，实际安装目标由工程里的 `ModsPath` 决定。各工程的 PCK 导出命令设为 `WarnAndContinue`，因此 `publish` 返回成功后仍应核对 PCK 是否实际生成。
+NuGet 依赖版本固定在工程文件中。完整发布先导出到被忽略的 `.publish/` 临时目录，确认 PCK 存在后再复制进游戏目录。MegaDot 可能在 PCK 成功生成时仍报告编辑器设置警告，因此发布后应继续检查输出文件。
 
-## GitHub 与游戏发布
+## 文档与旧工作区
 
-此仓库保存源码和资源。使用 `git add`、`git commit`、`git push` 更新 GitHub；这不会安装或上传游戏 Mod。用于本机游戏的安装由上述 `build.bat` / `publish.bat` 完成。若要向玩家分发，请从游戏 `mods/<ModName>/` 取对应的 DLL、JSON、PCK，并在目标游戏版本上测试。仓库不包含游戏本体、反编译源码、NuGet 缓存或本机构建产物。
-
-## 本地参考资料
-
-仓库内的 [`docs/`](docs/README.md) 管理当前交接、角色调整、测试清单和发布说明，更新规则见文档索引。迁移前的工作目录 `D:\sts2mod` 保留原工程历史、未提交状态、`.ref/` 反编译与本地化提取文件、`.opencode/skills/` 经验笔记，以及详细排障和美术参考，供本机和其他项目查阅。以后应在本仓库修改代码，避免两个目录同时改同一文件。
+阅读 [`docs/README.md`](docs/README.md) 了解文档更新规则，继续工作先看 [`docs/HANDOFF.md`](docs/HANDOFF.md)。迁移前的 `D:\sts2mod` 保留旧 Git 历史、反编译源码和详细排障经验，供本地及其他项目参考；当前代码以本仓库为准。

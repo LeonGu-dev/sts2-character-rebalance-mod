@@ -5,7 +5,7 @@
 ## 测试前准备
 
 - [ ] 完全退出游戏
-- [ ] 确认部署目录存在 `SilentRebalance.dll`、`SilentRebalance.json`、`SilentRebalance.pck`
+- [ ] 确认游戏 `mods/RebalanceMod/` 中存在 `RebalanceMod.dll`、`RebalanceMod.json`、`RebalanceMod.pck`
 - [ ] 启动游戏并使用静默者进入一场战斗
 - [ ] 分别准备未升级卡牌和升级卡牌进行测试
 
@@ -81,12 +81,12 @@
 ## 发布与日志检查
 
 - [ ] 游戏完全重启后模组正常加载
-- [ ] 静默模组初始化日志只出现一次
+- [ ] `RebalanceMod` 初始化日志只出现一次
 - [ ] 日志中没有 `Patching exception`
 - [ ] 日志中没有 `HarmonyException`
 - [ ] 日志中没有 `Could not find card image path`
 - [ ] 日志中没有本地化 JSON 加载错误
-- [ ] 确认 `SilentRebalance.pck` 包含全神贯注的卡牌文本
-- [ ] 确认 DLL 未包含铁甲战士或故障机器人的初始化器
+- [ ] 确认 `RebalanceMod.pck` 包含全神贯注的卡牌文本
+- [ ] 确认 DLL 只有一个 Mod 初始化器，并同时包含三个角色的补丁
 
 Windows 日志通常位于 `%APPDATA%\SlayTheSpire2\logs\godot.log`。

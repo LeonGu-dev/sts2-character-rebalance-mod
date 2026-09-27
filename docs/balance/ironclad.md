@@ -79,10 +79,10 @@
 - **角色**:战士(铁甲战士)
 - **卡池**:`IroncladCardPool`(稀有度:罕见/Uncommon)
 - **效果**:1 费技能牌。获得 15 点格挡(升级后 20),将 2 张伤口加入手牌。
-- **实现**:Mod 自定义卡牌,见 `MySts2ContentModCode/Cards/PowerThrough.cs`,非 Harmony 补丁。
+- **实现**:Mod 自定义卡牌,见 `src/Ironclad/Cards/PowerThrough.cs`,非 Harmony 补丁。
 - **卡牌 ID**:`MYSTS2CONTENTMOD-POWER_THROUGH`
 
 ## 附注
 
 - 全部卡牌描述已同步更新(简体中文本地化)。
-- 实现基于 Harmony 补丁,详见 `MySts2ContentModCode/Hooks/` 目录。
+- 实现基于 Harmony 补丁,详见 `src/Ironclad/Hooks/` 目录。

@@ -1,0 +1,65 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1" InitialTargets="CheckDependencyPaths">
+  <Import Project="Sts2PathDiscovery.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>true</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>RebalanceMod</AssemblyName>
+    <AppOutputBase>$(MSBuildProjectDirectory)/</AppOutputBase>
+    <PathMap>$(AppOutputBase)=./</PathMap>
+    <GodotDisabledSourceGenerators>GodotPluginsInitializer</GodotDisabledSourceGenerators>
+    <NoWarn>$(NoWarn);MSB3270</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup Condition="Exists('$(Sts2DataDir)')">
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2DataDir)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)/sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.4.5" PrivateAssets="All" />
+    <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="0.1.9" />
+    <AdditionalFiles Include="RebalanceMod/localization/**/*.json" />
+    <None Include="RebalanceMod.json" />
+    <None Include="project.godot" />
+    <None Include="RebalanceMod/**" />
+  </ItemGroup>
+
+  <Target Name="CheckDependencyPaths">
+    <Error Text="Slay the Spire 2 data not found at '$(Sts2DataDir)'"
+           Condition="'$(Sts2DataDir)' == '' or !Exists('$(Sts2DataDir)')" />
+  </Target>
+
+  <Target Name="CopyToModsFolderOnBuild" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsPath)RebalanceMod/" />
+    <Copy SourceFiles="RebalanceMod.json" DestinationFolder="$(ModsPath)RebalanceMod/" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ModsPath)RebalanceMod/" />
+  </Target>
+
+  <Target Name="NeedGodotForPublish" BeforeTargets="Publish">
+    <Error Text="Set GodotPath to MegaDot / Godot 4.5.1 mono in Directory.Build.props."
+           Condition="'$(GodotPath)' == '' or !Exists('$(GodotPath)')" />
+  </Target>
+
+  <Target Name="GodotPublish" AfterTargets="Publish"
+          Condition="'$(GodotPath)' != '' and Exists('$(GodotPath)') and '$(IsInnerGodotExport)' != 'true'">
+    <PropertyGroup>
+      <PackOutput>$(MSBuildProjectDirectory)/.publish/RebalanceMod.pck</PackOutput>
+    </PropertyGroup>
+    <MakeDir Directories="$(MSBuildProjectDirectory)/.publish" />
+    <Delete Files="$(PackOutput)" />
+    <Exec Command="&quot;$(GodotPath)&quot; --headless --export-pack &quot;BasicExport&quot; &quot;$(PackOutput)&quot;"
+          EnvironmentVariables="IsInnerGodotExport=true;MSBUILDDISABLENODEREUSE=1"
+          ContinueOnError="WarnAndContinue" />
+    <Error Text="MegaDot did not create $(PackOutput)." Condition="!Exists('$(PackOutput)')" />
+    <Copy SourceFiles="$(PackOutput)" DestinationFolder="$(ModsPath)RebalanceMod/" />
+  </Target>
+</Project>

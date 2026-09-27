@@ -7,9 +7,9 @@
 **/.idea/
 .ref/
 .opencode/
-RebalanceMod/
 RebalanceModContent/
 .build-mods/
+.publish/
 Directory.Build.props
 *.user
 *.sln.DotSettings
