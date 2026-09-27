@@ -1,5 +1,7 @@
 # Slay the Spire 2 character rebalance
 
+![角色平衡 / Rebalance 封面](RebalanceMod/mod_image.png)
+
 一个 `RebalanceMod` 同时调整铁甲战士、静默猎手和故障机器人。仓库只有一个 C# 工程、一个 Mod 清单、一个初始化入口和一个 PCK。后续角色也加入同一个 Mod，不再创建职业专属 DLL。
 
 ## 目录
