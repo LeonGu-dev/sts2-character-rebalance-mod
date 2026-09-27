@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Use MegaDot / Godot 4.5.1 mono for PCK export. -->
+    <GodotPath>C:/path/to/MegaDot_v4.5.1-stable_mono_win64.exe</GodotPath>
+    <Sts2Path>D:/path/to/Slay the Spire 2</Sts2Path>
+  </PropertyGroup>
+</Project>

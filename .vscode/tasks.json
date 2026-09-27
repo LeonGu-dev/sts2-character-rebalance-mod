@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (dll only)",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["build", "IroncladRebalance.csproj", "-c", "Release"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$msCompile",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "Publish (dll + pck)",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["publish", "IroncladRebalance.csproj", "-c", "Release"],
+      "problemMatcher": "$msCompile",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "Launch game (Steam)",
+      "type": "shell",
+      "command": "start steam://rungameid/2868840",
+      "problemMatcher": []
+    }
+  ]
+}

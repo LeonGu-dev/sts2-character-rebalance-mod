@@ -1,0 +1,10 @@
+{
+  "SILENTREBALANCE-CONCENTRATE.title": "Concentrate",
+  "SILENTREBALANCE-CONCENTRATE.description": "Discard {Cards:diff()} cards. Gain {Energy:energyIcons()}.",
+  "CALCULATED_GAMBLE.description": "Discard your [gold]Hand[/gold],\nthen draw that many cards.",
+  "CORROSIVE_WAVE.description": "Whenever you draw a card this turn, apply {CorrosiveWave:diff()} [gold]Poison[/gold] to a random enemy.",
+  "FLICK_FLACK.description": "Deal {Damage:diff()} damage to ALL enemies.",
+  "MASTER_PLANNER.description": "Each turn, the first non-[gold]Sly[/gold] Skill you play gains [gold]Sly[/gold].",
+  "UNTOUCHABLE.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "WRAITH_FORM.description": "Gain {IntangiblePower:diff()} [gold]Intangible[/gold].\nAt the start of your turn, lose {WraithFormPower:diff()} [gold]Dexterity[/gold]."
+}
