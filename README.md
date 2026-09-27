@@ -26,4 +26,4 @@ NuGet 依赖版本固定在工程文件中。完整发布先导出到被忽略�
 
 ## 文档与旧工作区
 
-阅读 [`docs/README.md`](docs/README.md) 了解文档更新规则，继续工作先看 [`docs/HANDOFF.md`](docs/HANDOFF.md)。迁移前的 `D:\sts2mod` 保留旧 Git 历史、反编译源码和详细排障经验，供本地及其他项目参考；当前代码以本仓库为准。
+阅读 [`docs/README.md`](docs/README.md) 了解文档更新规则，继续工作先看 [`docs/HANDOFF.md`](docs/HANDOFF.md)。以后扩展到其他角色时按 [`docs/ADDING_CHARACTER.md`](docs/ADDING_CHARACTER.md) 操作。迁移前的 `D:\sts2mod` 保留旧 Git 历史、反编译源码和详细排障经验，供本地及其他项目参考；当前代码以本仓库为准。

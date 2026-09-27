@@ -7,7 +7,9 @@
 | [`HANDOFF.md`](HANDOFF.md) | 当前可继续工作的状态、已验证事项、下一步任务 | 每次结束一轮开发或排障后 |
 | [`balance/ironclad.md`](balance/ironclad.md)、[`balance/silent.md`](balance/silent.md)、[`balance/defect.md`](balance/defect.md) | 各角色卡牌的设计与实现清单 | 每次调整卡牌时，与代码同一次提交 |
 | [`tests/silent.md`](tests/silent.md) | 可重复执行的游戏内测试项 | 测试后记录游戏版本、日期和结果 |
+| [`tests/2026-09-27-single-mod-smoke.md`](tests/2026-09-27-single-mod-smoke.md) | 单一 Mod 首次游戏内验证记录 | 保留为本次验证快照 |
 | [`release/defect.md`](release/defect.md) | 给玩家看的历史版本说明 | 准备对应版本发布时 |
+| [`ADDING_CHARACTER.md`](ADDING_CHARACTER.md) | 将新角色加入唯一 Mod 的步骤 | 工程结构或发布流程变化时 |
 
 ## 更新规则
 
