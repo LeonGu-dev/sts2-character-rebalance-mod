@@ -7,17 +7,17 @@ Rebalances Ironclad, Silent, Defect, and Regent in one mod, with four additional
 ## 查看全部改动
 
 - **[完整逐卡对照（63 项）](docs/release/card-changes-zh.md)**：原版与 Mod 对比，包含费用、数值、稀有度、升级及重做机制。
-- [中文完整说明](docs/release/steam-workshop-description.txt) · [English description](docs/release/steam-workshop-description-en.txt)
-- [中文工坊简版](docs/release/steam-workshop-description-zh-short.txt) · [English Workshop short description](docs/release/steam-workshop-description-en-short.txt)
+- [中文完整说明](docs/release/workshop/steam-workshop-description.txt) · [English description](docs/release/workshop/steam-workshop-description-en.txt)
+- [中文工坊简版](docs/release/workshop/steam-workshop-description-zh-short.txt) · [English Workshop short description](docs/release/workshop/steam-workshop-description-en-short.txt)
 - [源码](src/) · [设计与测试文档](docs/README.md)
 
-基准与已有验证版本为 **v0.111.0**；用户在 2026-10-11 确认当前版本验证通过。详细回归项见 [静默](docs/tests/silent.md) 和 [储君](docs/tests/regent.md)。游戏更新后需复核兼容性。
+适用游戏版本：**v0.111.0**。游戏更新后需复核兼容性。
 
 ## 安装
 
 需要 **BaseLib 3.4.5**（工程固定此版本；清单允许更新版本，更新后的兼容性需实际验证）。将同一版本的 `RebalanceMod.dll`、`RebalanceMod.json`、`RebalanceMod.pck` 放入游戏 `mods/RebalanceMod/`，启用 BaseLib 与本 Mod 后重启游戏。
 
-请避免同时启用此前按角色拆分的旧版 Mod，或修改同一卡牌机制的其他 Mod。当前 GitHub 尚无本轮新版本发布；Steam 工坊地址待实际发布后补充。
+请避免同时启用按角色拆分的旧版 Mod，或修改同一卡牌机制的其他 Mod。源码与文档见 [GitHub 仓库](https://github.com/LeonGu-dev/sts2-character-rebalance-mod)。
 
 ## 从源码构建
 
@@ -39,11 +39,11 @@ Rebalances Ironclad, Silent, Defect, and Regent in one mod, with four additional
 | `RebalanceMod/` | PCK 使用的资源；第三方素材适用单独的权利说明 |
 | `docs/` | 玩家说明、设计记录、测试与发布说明 |
 
-旧自定义卡牌命名空间与 ID 保留以兼容已有本地化及存档。新增角色按 [扩展指南](docs/ADDING_CHARACTER.md) 加入同一个 Mod。
+旧自定义卡牌命名空间与 ID 保留以兼容已有本地化及存档。新增角色按 [扩展指南](docs/development/adding-character.md) 加入同一个 Mod。
 
 ## 许可与素材
 
-原创代码与文档采用 **[MIT License](LICENSE)**，适用范围见 **[第三方内容声明](THIRD_PARTY_NOTICES.md)**。原版卡图、模板素材及第三方代码不属于本项目的 MIT 授权；图片来源与尚未确认的授权记录见 [素材清单](docs/release/asset-provenance.md)。作者选择保留现有资源公开项目，不将其声明为自由商用素材。
+原创代码与文档采用 **[MIT License](LICENSE)**，适用范围见 **[第三方内容声明](THIRD_PARTY_NOTICES.md)**。原版卡图、模板素材及第三方代码不属于本项目的 MIT 授权；图片来源与许可状态见 [素材清单](docs/licenses/asset-provenance.md)。
 
 Original code and documentation are MIT licensed. Third-party artwork and upstream-owned content are excluded; see [third-party notices](THIRD_PARTY_NOTICES.md).
 

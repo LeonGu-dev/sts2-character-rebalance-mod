@@ -15,15 +15,15 @@ Slay the Spire and Slay the Spire 2 and their original artwork belong to their r
 | Repository files under `RebalanceMod/` | Source record | License status |
 | --- | --- | --- |
 | `SilentRebalance/images/card_portraits/concentrate.png` and `big/concentrate.png` | Slay the Spire Wiki, `Green-Concentrate-Art.png`; [file page](https://slaythespire.wiki.gg/wiki/File:Green-Concentrate-Art.png) | Original game art; specific redistribution permission not independently confirmed |
-| `IroncladRebalance/images/card_portraits/power_through.png` and `big/power_through.png` | Historical creation notes cite [Wiki image](https://slaythespire.wiki.gg/images/Red-PowerThrough-Art.png) | Source record exists; image identity and specific redistribution permission not independently confirmed |
-| `DefectRebalance/images/card_portraits/{recursion,heat_sinks,recycle}.png` and matching `big/` files | Historical notes describe Wiki-sourced card art | Exact source pages and permission not yet confirmed |
+| `IroncladRebalance/images/card_portraits/power_through.png` and `big/power_through.png` | Recorded source: [Wiki image](https://slaythespire.wiki.gg/images/Red-PowerThrough-Art.png) | Source record exists; image identity and specific redistribution permission not independently confirmed |
+| `DefectRebalance/images/card_portraits/{recursion,heat_sinks,recycle}.png` and matching `big/` files | Wiki-sourced card art; exact source pages not recorded | Exact source pages and permission not yet confirmed |
 | Character resource folders' `card.png`, `power.png`, `relic.png`, `relic_outline.png` and large variants | Matching files across character folders; likely template placeholders | Exact provenance and license not yet confirmed |
 | Character folders' legacy `mod_image.png` | Matching legacy cover files | Exact provenance and license not yet confirmed |
-| Root `mod_image.png` | Project's bilingual cover, commit `204338b` | Font and any third-party graphic provenance not fully recorded; excluded from the code MIT grant |
+| Root `mod_image.png` | Project's bilingual cover | Font and any third-party graphic provenance not fully recorded; excluded from the code MIT grant |
 
-Wiki hosting is not, by itself, a grant to relicense underlying game artwork. No claim is made that these images are CC-licensed, MIT-licensed, or free for commercial reuse. Inclusion in this repository is not a substitute for permission from the relevant rights holder. Detailed records: [asset provenance](docs/release/asset-provenance.md).
+Wiki hosting is not, by itself, a grant to relicense underlying game artwork. No claim is made that these images are CC-licensed, MIT-licensed, or free for commercial reuse. Inclusion in this repository is not a substitute for permission from the relevant rights holder. Detailed records: [asset provenance](docs/licenses/asset-provenance.md).
 
-Wiki 下载来源本身不构成原版美术的再许可授权。本仓库不宣称上述图片采用 CC、MIT 或可自由商用；素材声明也不代替权利人授权。作者已选择保留现有资源并公开项目，授权证据缺口仍如实记录。
+Wiki 下载来源本身不构成原版美术的再许可授权。本仓库不宣称上述图片采用 CC、MIT 或可自由商用；素材声明也不代替权利人授权。素材的来源和许可状态见素材清单。
 
 Entrench and Regent portraits and some status icons are referenced from a user's installed game rather than copied into this repository. Game assemblies, soundtracks and a decompiled game source tree are not distributed here.
 
@@ -32,6 +32,6 @@ Entrench and Regent portraits and some status icons are referenced from a user's
 - [BaseLib](https://github.com/Alchyr/BaseLib-StS2): dependency referenced as `Alchyr.Sts2.BaseLib` 3.4.5.
 - [Harmony](https://github.com/pardeike/Harmony): runtime patching dependency supplied by the game installation.
 - [Godot](https://godotengine.org/) / MegaDot: build and resource-export tooling.
-- [ModTemplate-StS2](https://github.com/Alchyr/ModTemplate-StS2): some base-card comments and structure resemble the mod template. Its inspected root contains no LICENSE; the project's own MIT grant does not purport to grant rights to upstream-owned portions or artwork.
+- [ModTemplate-StS2](https://github.com/Alchyr/ModTemplate-StS2): some base-card comments and structure resemble the mod template. the project's own MIT grant does not purport to grant rights to upstream-owned portions or artwork.
 
 Each dependency and upstream-owned portion remains subject to its own applicable terms. The project MIT grant does not authorize use of game content or override [Mega Crit's content policy](https://megacrit.com/content-policy/).
