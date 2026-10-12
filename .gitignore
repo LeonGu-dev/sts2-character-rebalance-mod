@@ -19,3 +19,13 @@ Directory.Build.props
 *.tmp
 *.log
 _test_pck_name*
+
+# Local secrets and diagnostic dumps
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.dmp

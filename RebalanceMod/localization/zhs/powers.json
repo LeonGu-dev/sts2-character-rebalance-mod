@@ -1,0 +1,4 @@
+{
+  "GENESIS_POWER.description": "本回合打出牌不消耗{singleStarIcon}。回合结束时失去所有{singleStarIcon}，此后本场战斗无法获得{singleStarIcon}。",
+  "GENESIS_POWER.smartDescription": "本回合打出牌不消耗{singleStarIcon}。回合结束时失去所有{singleStarIcon}，此后本场战斗无法获得{singleStarIcon}。"
+}
