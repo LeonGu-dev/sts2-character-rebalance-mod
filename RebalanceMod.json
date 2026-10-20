@@ -2,7 +2,7 @@
   "id": "RebalanceMod",
   "name": "Rebalance Mod",
   "author": "LeonGu-dev",
-  "description": "Card balance changes for Ironclad, Silent, Defect, and Regent. English and Simplified Chinese text.",
+  "description": "Card balance changes for Ironclad, Silent, Defect, Regent, and Necrobinder. English and Simplified Chinese text.",
   "version": "v0.0.0",
   "min_game_version": "0.107.0",
   "has_pck": true,

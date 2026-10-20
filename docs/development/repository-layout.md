@@ -26,10 +26,10 @@
 | `docs/tests/` | 可重复执行的游戏内测试清单 |
 | `docs/tests/records/` | 已执行测试的日期快照 |
 | `docs/release/card-changes-zh.md` | 稳定的玩家逐卡对照入口，工坊文案已引用 |
-| `docs/release/workshop/` | 中英文、完整与简版 BBCode 发布文本 |
-| `docs/development/` | 当前交接、角色扩展和仓库维护说明 |
+| `docs/release/workshop/` | `description-zh.txt` 与 `description-en.txt` 两份 BBCode 工坊简介 |
+| `docs/development/` | 当前交接、角色扩展和仓库维护指南 |
 | `docs/licenses/` | 素材来源与许可范围的详细记录 |
-| `docs/archive/` | 历史开发日志、旧发布草稿和发布检查快照 |
+| `docs/development/records/` | 开发、发布、校稿与文档维护记录 |
 
 ## 运行资源
 
@@ -41,6 +41,7 @@
 
 - `.godot/`、`.build-mods/`、`.publish/`、`bin/`、`obj/`：缓存、构建产物及安装备份，已有忽略规则。
 - 游戏 DLL、PDB、PCK、本机配置、日志、反编译参考资料：不作为仓库文档提交。
+- 发布前清理可再生成的缓存和过期测试工程；需要保留的诊断脚本与安装备份在仓库外归档。`.publish/` 仅保留最终发布文件与压缩包，不提交到 Git。
 
 - `D:\sts2mod`：旧工作区，含独立角色工程、历史资料与未提交改动；继续保留作本地参考。
 

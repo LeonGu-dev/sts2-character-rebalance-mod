@@ -12,6 +12,7 @@
 | `RebalanceMod/mod_image.png` | 项目双语封面 | 制作方式、字体及第三方图形的许可待作者确认 |
 | `.png.import` | Godot 导入配置 | 不是原图授权文件；如排除图像，应同时处理对应 import |
 | 巩固、储君原版卡图及征服者图标 | 代码引用玩家已安装的游戏资源；没有新增对应复制图像 | 属于游戏资源；运行时引用与把原图复制到公开仓库应区别处理 |
+| `Necrobinder/images/powers/{death_draw,death_blast,price_of_power}.svg` | 2026-10-20 为本 Mod 编写的 SVG 几何图形，未复制外部图片 | 原创矢量图标，适用仓库 MIT 许可 |
 
 ## 官方政策边界
 

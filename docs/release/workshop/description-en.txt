@@ -1,0 +1,29 @@
+[h1]Character Rebalance[/h1]
+
+Rebalances selected Ironclad, Silent, Defect, Regent, and Necrobinder cards in Slay the Spire 2, adjusting costs, stats, rarities, and mechanics. Supports English and Simplified Chinese card text.
+
+[h1]Changes at a glance[/h1]
+
+Includes [b]83 card changes[/b]:
+
+[list]
+[*][b]Ironclad: 17[/b]. Changes to Exhaust, Strength, and Block cards; adds Power Through.
+[*][b]Silent: 6[/b]. Changes to draw, Poison, and Sly cards; adds Concentrate.
+[*][b]Defect: 19[/b]. Changes to Orbs, Focus, and Power cards; adds Recursion and Heat Sinks.
+[*][b]Regent: 21[/b]. Changes to Stars, Forge, and Sovereign Blade cards, including reworks of Conqueror, Genesis, and Devastate.
+[*][b]Necrobinder: 20[/b]. Reworks around Osty's deaths and revivals, Summon, Souls, and Doom. Soul draws when Exhausted, with Ethereal draws resolving after hand discard. Basic in-game testing is complete.
+[/list]
+
+[h1]Requirements[/h1]
+
+[list]
+[*]Requires [b]BaseLib 3.4.5 or later[/b].
+[*]Supported game version: [b]v0.111.0[/b].
+[/list]
+
+[h1]Full changes and source code[/h1]
+
+For a full comparison of costs, base and upgraded values, rarities, and reworked effects:
+
+[url=https://github.com/LeonGu-dev/sts2-character-rebalance-mod/blob/main/docs/release/card-changes-zh.md]Full card comparison (Chinese, 83 entries)[/url]
+[url=https://github.com/LeonGu-dev/sts2-character-rebalance-mod]GitHub project and source code[/url]

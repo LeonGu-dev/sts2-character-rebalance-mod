@@ -1,4 +1,21 @@
 {
+  "REBALANCEMOD-OSTY_DEATH_DRAW_POWER.title": "Pull from Below",
+  "REBALANCEMOD-OSTY_DEATH_DRAW_POWER.description": "Whenever your [gold]Osty[/gold] dies, draw {Amount} card(s). Draws triggered before end-of-turn hand discard resolve after that discard.",
+  "REBALANCEMOD-OSTY_DEATH_DRAW_POWER.smartDescription": "Whenever your [gold]Osty[/gold] dies, draw {Amount} card(s). Draws triggered before end-of-turn hand discard resolve after that discard.",
+  "REBALANCEMOD-OSTY_DEATH_BLAST_POWER.title": "Misery",
+  "REBALANCEMOD-OSTY_DEATH_BLAST_POWER.description": "Whenever your [gold]Osty[/gold] dies, deal {Amount} damage to ALL enemies.",
+  "REBALANCEMOD-OSTY_DEATH_BLAST_POWER.smartDescription": "Whenever your [gold]Osty[/gold] dies, deal {Amount} damage to ALL enemies.",
+  "REBALANCEMOD-PRICE_OF_POWER_POWER.title": "Price of Power",
+  "REBALANCEMOD-PRICE_OF_POWER_POWER.description": "You cannot [gold]Summon[/gold] for the rest of combat.",
+  "REBALANCEMOD-PRICE_OF_POWER_POWER.smartDescription": "You cannot [gold]Summon[/gold] for the rest of combat.",
+  "DEVOUR_LIFE_POWER.title": "Soul Curse",
+  "DEVOUR_LIFE_POWER.description": "Whenever you play a [gold]Soul[/gold], apply {Amount} [gold]Doom[/gold] to ALL enemies.",
+  "DEVOUR_LIFE_POWER.smartDescription": "Whenever you play a [gold]Soul[/gold], apply {Amount} [gold]Doom[/gold] to ALL enemies.",
+  "SPIRIT_OF_ASH_POWER.description": "Whenever you play an [gold]Ethereal[/gold] card or one of your [gold]Ethereal[/gold] cards is [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
+  "SPIRIT_OF_ASH_POWER.smartDescription": "Whenever you play an [gold]Ethereal[/gold] card or one of your [gold]Ethereal[/gold] cards is [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
+  "SENTRY_MODE_POWER.title": "Wakeful Wrath",
+  "SENTRY_MODE_POWER.description": "Whenever your [gold]Osty[/gold] is revived, add {Amount} [gold]Sweeping Gaze[/gold] to your [gold]Hand[/gold].",
+  "SENTRY_MODE_POWER.smartDescription": "Whenever your [gold]Osty[/gold] is revived, add {Amount} [gold]Sweeping Gaze[/gold] to your [gold]Hand[/gold].",
   "GENESIS_POWER.description": "Cards you play this turn do not consume {singleStarIcon}. At the end of this turn, lose all {singleStarIcon}. You cannot gain {singleStarIcon} for the rest of combat.",
   "GENESIS_POWER.smartDescription": "Cards you play this turn do not consume {singleStarIcon}. At the end of this turn, lose all {singleStarIcon}. You cannot gain {singleStarIcon} for the rest of combat."
 }
